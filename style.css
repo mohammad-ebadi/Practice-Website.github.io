@@ -1,25 +1,28 @@
 body{
     background: linear-gradient(90deg ,rgb(102, 93, 240) , rgb(32, 151, 28));
     box-sizing: border-box;
-}
-.container{
-    text-align: center;
-    font-weight: 700;
-    font-size: larger;
-}
-
-.links a{
-    text-decoration: none;
-    color: white;
-}
-li{
-    padding: 10px;
-}
-li:hover{
-    scale: 1.005;
-}
-.links ol li a:hover::after{
-    color: black;
-    content: '  ✔';
-}
-
+    }
+    .container{
+        text-align: center;
+        font-weight: 700;
+        font-size: larger;
+    }
+    
+    .links a{
+        text-decoration: none;
+        color: white;
+    }
+    li{
+        padding: 10px;
+    }
+    li:hover{
+        scale: 1.005;
+        transition: 0.5s;
+    }
+    a:hover{
+        color: black;
+    
+    }
+    .links ol li a:hover::after{
+        content: '  ✔';
+    }
