@@ -1,0 +1,19 @@
+body{
+    background: linear-gradient(90deg ,rgb(102, 93, 240) , rgb(32, 151, 28));
+    box-sizing: border-box;
+}
+.container{
+    text-align: center;
+    font-weight: 700;
+    font-size: larger;
+
+
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    padding: 5px;
+}
