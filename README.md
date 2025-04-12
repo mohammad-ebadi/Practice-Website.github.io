@@ -1,2 +1,2 @@
 # Practice-Website
-⚠This repo is for practicing purposes⚠
+⚠This repo is only for practicing purposes⚠
