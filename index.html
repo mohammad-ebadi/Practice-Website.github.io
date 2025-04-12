@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,23 +27,23 @@ background-attachment: fixed;
     font-weight: 700;
     font-size: larger;
 }
-
+.container p{
+    color: white;
+    font-size: 25px;
+}
 .links a{
     text-decoration: none;
     color: white;
 }
 li{
     padding: 10px;
-}
-li:hover{
-    transition: 0.5s;
+    color: white;
 }
 a:hover{
     color: black;
-
 }
-.links ol li a:hover::after{
-    content: '  ✔';
+a:hover::after{
+    content: " ✔";
 }
     </style>
 </head>
@@ -60,7 +60,6 @@ a:hover{
             -->
             <li><a href="http://www.mohammadebadi.com/Practice-Website.github.io/1-number-counter">number-counter</a></li>
             <li><a href="http://www.mohammadebadi.com/Practice-Website.github.io/2-cart-quantity">cart-quantity</a></li>
-
         </ol>
     </div>
     <script src="script.js"></script>
