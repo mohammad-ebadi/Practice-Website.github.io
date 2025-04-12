@@ -15,4 +15,11 @@ body{
 li{
     padding: 10px;
 }
+li:hover{
+    scale: 1.005;
+}
+.links ol li a:hover::after{
+    color: black;
+    content: '  ✔';
+}
 
