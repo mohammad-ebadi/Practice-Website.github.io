@@ -1,28 +1,32 @@
 body{
     background: linear-gradient(90deg ,rgb(102, 93, 240) , rgb(32, 151, 28));
     box-sizing: border-box;
+    background-image: url(backgroun.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     }
     .container{
         text-align: center;
         font-weight: 700;
         font-size: larger;
     }
-    
+    .container p{
+        color: white;
+        font-size: 25px;
+    }
     .links a{
         text-decoration: none;
         color: white;
     }
     li{
         padding: 10px;
-    }
-    li:hover{
-        scale: 1.005;
-        transition: 0.5s;
+        color: white;
     }
     a:hover{
         color: black;
-    
     }
-    .links ol li a:hover::after{
-        content: '  ✔';
+    a:hover::after{
+        content: " ✔";
     }
