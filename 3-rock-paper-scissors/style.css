@@ -2,10 +2,15 @@ body{
     text-align: center;
     background: linear-gradient(90deg , rgb(86, 52, 148) , rgb(145, 17, 21) );
 }
+#name{
+    font-size: 30px;
+    font-weight: 900;
+}
 button{
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    padding: 10px;
 }
 button:hover{
     text-decoration: dashed;
