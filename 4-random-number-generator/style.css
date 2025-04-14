@@ -1,1 +1,38 @@
+body{
+    background-color: blueviolet;
+    padding: 10px;
+}
+p{
+    text-align: center;
+    background-color: gold;
+    font-size: 30px;
+    margin: 0px;
+    padding: 10px;
 
+}
+#label{
+    display: block;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+}
+button{
+    display: flex;
+    padding: 10px;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+    padding: 10px;
+
+}
+button:hover{
+    background-color: rgb(180, 180, 180);
+}
+.input{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
