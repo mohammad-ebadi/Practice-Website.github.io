@@ -1,0 +1,22 @@
+.container{
+    text-align: center;
+    background-color: rgb(210, 135, 210);
+}
+.p1{
+    background-color: gold;
+}
+.container input{
+    margin: 10px;
+}
+.container button{
+    margin-top: 10px;
+}
+.subscribe-result{
+    background-color: green;
+}
+.payment-result{
+    background-color:orange;
+}
+p{
+    text-align: center;
+}

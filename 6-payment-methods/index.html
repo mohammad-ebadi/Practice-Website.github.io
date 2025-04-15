@@ -17,6 +17,32 @@
 </head>
 
 <body>
+    <div class="container">
+        <p class="p1">Payment Methods</p>
+        <label for="subscribe">Subscribe</label>
+        <input type="checkbox" name="subscribe" id="subscribe">
+        <hr>
+
+        <div class="inputs">
+            <label for="visa">Visa</label>
+            <input type="radio" name="payment" id="visa"><br>
+
+            <label for="master">Master Card</label>
+            <input type="radio" name="payment" id="master"><br>
+            
+            <label for="paypal">Paypal</label>
+            <input type="radio" name="payment" id="paypal">
+        </div>
+        <button id="submit">Submit</button>
+    </div>
+    <div class="subscribe-result">
+        <p id="subscribeResult"></p>
+    </div>
+    <div class="payment-result">
+        <p id="paymentResult"></p>
+    </div>
+    
+    
 
     <script src="script.js"></script>
 </body>
