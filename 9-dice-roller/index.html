@@ -17,6 +17,15 @@
 </head>
 
 <body>
+    <div id="container">
+        <p>Dice Roller</p>
+        <label for="number"># Dice :</label>
+        <input type="number" name="number" id="number" min="1" max="6" placeholder="1 to 6"><br>
+        <button id="btn" onclick="rollDice()">Roll Dice</button>
+        <div id="diceResult"></div>
+        <div id="diceImages"></div>
+    </div>
+    
 
     <script src="script.js"></script>
 </body>

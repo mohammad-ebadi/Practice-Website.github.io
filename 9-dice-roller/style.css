@@ -1,0 +1,21 @@
+p{
+    font-size: 2rem;
+}
+#container{
+    text-align: center;
+    background-color: rgb(218, 228, 218);
+}
+
+#number{
+    text-align: center;
+    width: 100px;
+
+}
+#container button{
+    padding: 10px;
+    margin: 20px;
+}
+#container button:hover{
+    background-color: rgb(218, 213, 213);
+    cursor: pointer;
+}
