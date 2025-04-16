@@ -19,3 +19,11 @@ p{
     background-color: rgb(218, 213, 213);
     cursor: pointer;
 }
+#diceResult{
+    margin: 10px;
+}
+#diceImages img{
+    width: 100px;
+    margin: 5px;
+
+}
