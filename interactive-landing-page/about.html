@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Football Betting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="cursor-circle"></div>
+    <!-- Login and Signup Modals -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" class="switch-form">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Create an Account</h2>
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" required> I agree to the Terms and Conditions
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p class="form-footer">Already have an account? <a href="#" class="switch-form">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-futbol"></i>
+                BetPro
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="odds.html">Odds</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="login-btn" id="openLoginModal">Login</button>
+                <button class="signup-btn" id="openSignupModal">Sign Up</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-page">
+        <div class="section-header">
+            <h2>About BetPro</h2>
+            <p>Your trusted platform for football betting</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-section">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2024, BetPro has quickly become a leading platform for football betting enthusiasts. We combine cutting-edge technology with expert analysis to provide the best betting experience.</p>
+                    <p>Our mission is to make football betting accessible, fair, and enjoyable for everyone. We're committed to responsible gambling and providing the most accurate odds in the market.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-story.jpg" alt="Our Story">
+                </div>
+            </div>
+
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="images/about-features.jpg" alt="Our Features">
+                </div>
+                <div class="about-text">
+                    <h3>Why Choose Us</h3>
+                    <ul class="features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Real-time odds updates</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Expert match analysis</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure payment system</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 customer support</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Mobile-friendly platform</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <h3>Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="images/team-1.jpg" alt="Team Member">
+                        <h4>John Smith</h4>
+                        <p>CEO & Founder</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team-2.jpg" alt="Team Member">
+                        <h4>Sarah Johnson</h4>
+                        <p>Head of Operations</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/team-3.jpg" alt="Team Member">
+                        <h4>Michael Brown</h4>
+                        <p>Lead Analyst</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BetPro</h3>
+                <p>The best platform for football betting</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="matches.html">Matches</a></li>
+                    <li><a href="odds.html">Odds</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-envelope"></i> support@betpro.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Football Betting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cursor circle follow effect
+        const cursorCircle = document.querySelector('.cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            cursorCircle.style.left = e.clientX + 'px';
+            cursorCircle.style.top = e.clientY + 'px';
+        });
+
+        // Modal functionality
+        const loginModal = document.getElementById('loginModal');
+        const signupModal = document.getElementById('signupModal');
+        const openLoginBtn = document.getElementById('openLoginModal');
+        const openSignupBtn = document.getElementById('openSignupModal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        const switchFormLinks = document.querySelectorAll('.switch-form');
+
+        // Open login modal
+        openLoginBtn.addEventListener('click', () => {
+            loginModal.style.display = 'block';
+            signupModal.style.display = 'none';
+        });
+
+        // Open signup modal
+        openSignupBtn.addEventListener('click', () => {
+            signupModal.style.display = 'block';
+            loginModal.style.display = 'none';
+        });
+
+        // Close modals when clicking the close button
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                loginModal.style.display = 'none';
+                signupModal.style.display = 'none';
+            });
+        });
+
+        // Switch between login and signup forms
+        switchFormLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (loginModal.style.display === 'block') {
+                    loginModal.style.display = 'none';
+                    signupModal.style.display = 'block';
+                } else {
+                    signupModal.style.display = 'none';
+                    loginModal.style.display = 'block';
+                }
+            });
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.style.display = 'none';
+            }
+            if (e.target === signupModal) {
+                signupModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> 

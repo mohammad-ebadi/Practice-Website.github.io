@@ -1,0 +1,1739 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+:root {
+    --primary-color: #1a237e;
+    --secondary-color: #ff6f00;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.feature-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.match-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.odd h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.cta h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+/* Form Elements */
+input, button, .submit-btn {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn, .cta-button, .login-btn, .signup-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* Header Styles */
+header {
+    background-image: url('../images/pexels-pixabay-46798.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-attachment: fixed;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+/* Ensure content stays above the overlay */
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: #ff6b6b;
+    transform: scale(1.05);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.login-btn, .signup-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.signup-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Hero section styles */
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    background: #ff5252;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 20px;
+    background: var(--light-bg);
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Matches Section */
+.matches {
+    padding: 80px 20px;
+}
+
+.matches-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.match-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.match-header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+.match-content {
+    padding: 20px;
+}
+
+.odds {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.odd {
+    text-align: center;
+    padding: 10px;
+    background: var(--light-bg);
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 5px;
+}
+
+/* CTA Section */
+.cta {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .features-container,
+    .matches-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .auth-buttons {
+        margin-top: 1rem;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* Features */
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    /* Matches */
+    .matches-container {
+        grid-template-columns: 1fr;
+    }
+
+    .match-card {
+        margin: 1rem 0;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        margin: 2% auto;
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    /* Header */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Features */
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Matches */
+    .match-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .odds {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .odd {
+        width: 100%;
+    }
+
+    /* Modal */
+    .modal-content {
+        padding: 1rem;
+    }
+
+    .form-group input {
+        padding: 0.6rem;
+    }
+
+    .submit-btn {
+        padding: 0.6rem;
+    }
+
+    /* Footer */
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        padding: 0.8rem;
+    }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .modal-content {
+        margin: 0 auto;
+        max-height: 100vh;
+    }
+
+    .hero {
+        padding: 2rem;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo,
+    .hero h1,
+    .feature-card h3,
+    .match-header h3 {
+        font-weight: 600;
+    }
+}
+
+/* Page-specific styles */
+.matches-page, .odds-page, .about-page, .contact-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Matches page styles */
+.matches-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.match-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.match-header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.match-content {
+    padding: 1.5rem;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.vs {
+    font-weight: bold;
+    color: #333;
+}
+
+.odds {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.odd {
+    text-align: center;
+    padding: 0.5rem;
+    background: #f4f4f4;
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 0.5rem;
+}
+
+.bet-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bet-btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}
+
+/* Odds page styles */
+.odds-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.odds-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.odds-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.odds-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.odds-card:hover {
+    transform: translateY(-5px);
+}
+
+.odds-header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.match-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.league {
+    font-size: 0.9rem;
+    color: #ff6b6b;
+}
+
+.match {
+    font-weight: 500;
+}
+
+.match-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.odds-content {
+    padding: 1.5rem;
+}
+
+.odds-type {
+    margin-bottom: 1.5rem;
+}
+
+.odds-type h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.odds-values {
+    display: flex;
+    gap: 1rem;
+}
+
+.odd-value {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.odd-value:hover {
+    background: #e9ecef;
+}
+
+.odd-value span {
+    display: block;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.odd-value strong {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.bookmaker-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bookmaker-info img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.bookmaker-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.bet-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bet-btn:hover {
+    background: #ff5252;
+}
+
+/* Responsive adjustments for odds page */
+@media (max-width: 768px) {
+    .odds-filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .odds-values {
+        flex-direction: column;
+    }
+
+    .odd-value {
+        width: 100%;
+    }
+}
+
+/* About page styles */
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-card li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff6b6b;
+}
+
+/* Contact Page Styles */
+.contact-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover i {
+    transform: scale(1.2);
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.info-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 0.8rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.map-section {
+    margin-top: 3rem;
+}
+
+.map-section h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Active link style */
+nav ul li a.active {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #ff6b6b;
+    transform: rotate(90deg);
+}
+
+/* Form Styles */
+.auth-form {
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 0.8rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}
+
+/* Modern Styles */
+.logo i {
+    margin-right: 0.5rem;
+    color: #ff6b6b;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-button i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateX(5px);
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #ff6b6b;
+    border-radius: 3px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Feature Cards */
+.feature-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-link {
+    display: inline-flex;
+    align-items: center;
+    color: #ff6b6b;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-link i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Live Matches */
+.live-matches {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.match-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.live-badge {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.match-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.team img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.vs {
+    font-weight: bold;
+    color: #666;
+}
+
+.match-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.bet-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bet-btn:hover {
+    background-color: #ff5252;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 5rem 0;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content p {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info h4 {
+    margin-bottom: 0.2rem;
+}
+
+.author-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+/* Footer */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #666;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6b6b;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6b6b;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.feature-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .match-teams {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Matches Page Styles */
+.matches-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.matches-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.match-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+.match-header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.league-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.league-info img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.match-time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.match-content {
+    padding: 1.5rem;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.team img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+
+.vs {
+    font-weight: bold;
+    color: #666;
+    margin: 0 1rem;
+}
+
+.odds {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.odd {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.odd:hover {
+    background: #e9ecef;
+}
+
+.odd p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.odd h4 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.bet-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bet-btn:hover {
+    background: #ff5252;
+}
+
+/* Responsive adjustments for matches page */
+@media (max-width: 768px) {
+    .matches-filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .teams {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .odds {
+        flex-direction: column;
+    }
+
+    .odd {
+        width: 100%;
+    }
+}
+
+/* About Page Styles */
+.about-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    margin-top: 3rem;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.about-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.features-list i {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+}
+
+.team-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.team-section h3 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.team-member h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.team-member .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.team-member .social-links a {
+    color: #666;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.team-member .social-links a:hover {
+    color: #ff6b6b;
+}
+
+/* Responsive adjustments for about page */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-section:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+} 
