@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    background-color: gray;    
+}
+.result{
+    margin: 10px;
+    background-color: pink;
+}
+button{
+    padding: 20px;
+}
+button:hover{
+    background-color: rgb(80, 193, 93);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+a:hover{
+    font-weight: 900;
+}
