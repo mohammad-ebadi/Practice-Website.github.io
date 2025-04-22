@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    background-color: pink;
+}
+button{
+    padding: 10px;
+    font-weight: 900;
+    color: white;
+    background-color: black;
+    transition: background-color 1s ease;
+    border-radius: 5px;
+}
+button:hover{ 
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0 0 10px;
+}
