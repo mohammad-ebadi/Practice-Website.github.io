@@ -6,7 +6,7 @@ p{
     font-weight: 900;
     font-size: 30px;
 }
-input{
+.js-name-input{
     text-align: center;
     height: 33px;
     border-radius: 10px;
@@ -27,4 +27,7 @@ button:hover{
     color: rgb(0, 0, 0);
     transform: translateX(5px);
     font-weight: 900;
+}
+.taskList{
+    background-color: white;
 }
