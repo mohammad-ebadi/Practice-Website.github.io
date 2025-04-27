@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+img{
+    margin-top: 10px;
+    border-radius: 20px;
+}
+button{
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+button:hover{
+    background-color: orchid;
+}
