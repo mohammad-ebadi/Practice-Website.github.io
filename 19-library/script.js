@@ -4,7 +4,7 @@ const ul = document.querySelector('ul');
 const checkBox = document.querySelector('#hide input');
 const inputSearch = document.querySelector('#search-books input');
 
-const spanDelete = `<span class="delete">حذف</span>`;
+const spanDelete = `<span class="delete">Delete</span>`;
 
 link.addEventListener('click', function(e){
     const spanName = document.createElement('span');

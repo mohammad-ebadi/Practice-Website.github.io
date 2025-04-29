@@ -2,10 +2,11 @@ body{
     font-family: Tahoma;
     color: #444;
     letter-spacing: 1px;
+    background-color: rgb(242, 233, 233);
 }
 
 #book-list h1{
-    float: right;
+    float: left;
 }
 
 .clear{
@@ -21,7 +22,7 @@ h1, h2{
     max-width: 960px;
     margin: 20px auto;
     border-radius: 6px;
-    box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 100px rgba(0,0,0,0.2);
     box-sizing: border-box;
     padding: 0 0 20px;
     overflow: hidden;
@@ -29,8 +30,13 @@ h1, h2{
 }
 
 #page-banner{
-    background: #eee ;
-    padding: 10px 0;
+    background: #61bf64 ;
+    padding: 30px 0;
+    background-image: url(../Images/p7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
 
 }
 
@@ -57,7 +63,7 @@ h1, h2{
 }
 
 #book-list h2{
-    float: right;
+    float: left;
     margin-right: 15px;
 }
 
@@ -73,20 +79,20 @@ h1, h2{
 }
 
 #book-list li:hover{
-    border-color: #9361bf;
+    border-color: #61bf64;
 }
 
 .delete{
-    float: left;
-    background: #9361bf;
+    float: right;
+    background: hsl(9, 86%, 44%);
     padding: 6px;
-    border-radius: 4px;
+    border-radius: 10px 0px 10px 0px;
     cursor: pointer;
     color: white;
 }
 
 .name{
-    float: right;
+    float: left;
 }
 
 .delete:hover{
@@ -102,23 +108,24 @@ h1, h2{
     display: block;
     margin: 20px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #61bf64;
     font-size: 16px;
-    border-radius: 4px 0 0 4px;
+    border-radius: 0px 40px 40px 0px;
     box-sizing: border-box;
     width: 300px;
-    float: left;
+    float: right;
 }
 
 #add-book .button{
-    border: 1px solid #9361bf;
-    background: #9361bf;
+    border: 1px solid #61bf64;
+    background: #61bf64;
     padding: 10px 20px;
     font-size: 17px;
     display: inline-block;
-    border-radius: 0 4px 4px 0;
+    border-radius: 60px 0px 0px 60px;
     cursor: pointer;
     width: 59px;
+    height: 18px;
     margin: 20px 0;
     border-left: 0;
     text-decoration: none;
@@ -133,12 +140,14 @@ h1, h2{
 }
 
 #hide{
-    float: right;
+    float: left;
     padding: 20px 35px 20px 0;
+    margin-left: 50px;
 }
 
 #hide label{
     padding: 0 10px;
+    font-weight: bold;
 }
 
 #add-book #hide{
