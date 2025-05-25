@@ -12,16 +12,17 @@ Follow these steps to set up and run your React project:
     ```sh
    git clone https://github.com/mohammad-ebadi/Practice-Website.github.io.git
 
-3. Navigate to the `React` folder and choose the project folder you want to run.
-4. Enter the `vite-project` folder and open it using the command line.
-5. Install the dependencies by running:
+3. Navigate to the `React` folder.
+4. Choose the project folder you want to run.
+5. Enter the `vite-project` folder and open it using the command line.
+6. Install the dependencies by running:
 
    ```sh
    npm install
 
-6. Use this command in order to recive the "loclhost" URL:
+7. Use this command in order to recive the "loclhost" URL:
 
     ```sh
     npm run dev
 
-7. Hover over the cursor to the generated URL and press **Ctrl + Left Click** to open it with your browser.
+8. Hover over the cursor to the generated URL and press **Ctrl + Left Click** to open it with your browser.
