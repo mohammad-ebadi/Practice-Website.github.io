@@ -7,6 +7,7 @@ Follow these steps to set up and run your React project:
 
 ## Installation Steps
 1. Create an empty directory on your system.
+2. Open your directory with CMD.
 2. Copy the **repository clone** link and clone it into your new directory by running this command:
 
     ```sh
