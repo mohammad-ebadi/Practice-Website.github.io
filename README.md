@@ -16,7 +16,7 @@ Follow these steps to set up and run your React project:
    ```sh
    npm install
 
-6. Use this commaand in order to recive the "loclhost" URL:
+6. Use this command in order to recive the "loclhost" URL:
 
     ```sh
     npm run dev
