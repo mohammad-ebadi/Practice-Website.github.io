@@ -4,6 +4,7 @@ Follow these steps to set up and run your React project:
 
 ## Prerequisites
 - Ensure that **Node.js** is installed on your system.(https://nodejs.org/en)
+- Ensure that **Git** is installed on your system.(https://git-scm.com/)
 
 ## Installation Steps
 1. Create an empty directory on your system.
