@@ -21,4 +21,4 @@ Follow these steps to set up and run your React project:
     ```sh
     npm run dev
 
-7. Hover over the cursor on the generated URL and press **Ctrl + Left Click** to open it in your browser.
+7. Hover over the cursor on the generated URL and press **Ctrl + Left Click** to open it with your browser.
