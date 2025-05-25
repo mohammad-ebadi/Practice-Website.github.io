@@ -7,7 +7,10 @@ Follow these steps to set up and run your React project:
 
 ## Installation Steps
 1. Create an empty directory on your system.
-2. Copy the **repository clone** link and clone it into your new directory (https://github.com/mohammad-ebadi/Practice-Website.github.io.git).
+2. Copy the **repository clone** link and clone it into your new directory by running this command:
+
+    ```sh
+   git clone https://github.com/mohammad-ebadi/Practice-Website.github.io.git
 
 3. Navigate to the `React` folder and choose the project folder you want to run.
 4. Enter the `vite-project` folder and open it using the command line.
