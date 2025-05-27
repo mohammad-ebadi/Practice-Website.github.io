@@ -2,6 +2,7 @@ import Card from "./Components/card/Card.jsx";
 import ColorPicker from "./Components/colorPicker/ColorPicker.jsx";
 import Form from "./Components/form/Form.jsx";
 import Increment from "./Components/Increment/Increment.jsx";
+import Toggle from "./Components/toggle/Toggle.jsx";
 
 function App(){
   return(
@@ -20,6 +21,9 @@ function App(){
       <Form></Form>
       <br /><hr /><hr />
       <ColorPicker></ColorPicker>
+      <br /><hr /><hr />
+      <Toggle></Toggle>
+      <br /><hr /><hr />
       
     </>
   );
