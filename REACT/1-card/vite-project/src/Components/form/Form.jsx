@@ -17,7 +17,7 @@ function Form(){
             <input type="text" placeholder="Enter your name" onChange={handleNameChange}/>
             <p>Your Name Is : {name}</p>
 
-            <input type="number" placeholder="Enter your name" onChange={handleQuantityChange}/>
+            <input type="number" placeholder="Enter Quantity" onChange={handleQuantityChange}/>
             <p>Quantity Is : {quantity}</p>
             
         </>
