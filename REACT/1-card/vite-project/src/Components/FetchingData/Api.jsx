@@ -1,7 +1,7 @@
 import Axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function Test() {
+export default function Api() {
   const [catFact, setCatFact] = useState("");
 
   useEffect(() => {

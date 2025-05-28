@@ -3,7 +3,7 @@ import ColorPicker from "./Components/colorPicker/ColorPicker.jsx";
 import Form from "./Components/form/Form.jsx";
 import Increment from "./Components/Increment/Increment.jsx";
 import Toggle from "./Components/toggle/Toggle.jsx";
-import Test from "./test.jsx";
+import Api from "./Components/FetchingData/Api.jsx";
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
       <br />
       <hr />
       <hr />
-      <Test></Test>
+      <Api></Api>
       <br />
       <hr />
       <hr />
