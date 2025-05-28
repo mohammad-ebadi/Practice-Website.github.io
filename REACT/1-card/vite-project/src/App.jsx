@@ -3,11 +3,14 @@ import ColorPicker from "./Components/colorPicker/ColorPicker.jsx";
 import Form from "./Components/form/Form.jsx";
 import Increment from "./Components/Increment/Increment.jsx";
 import Toggle from "./Components/toggle/Toggle.jsx";
+import Test from "./test.jsx";
 
-function App(){
-  return(
+function App() {
+  return (
     <>
-      <br /><hr /><hr />
+      <br />
+      <hr />
+      <hr />
       <h1>Using Components</h1>
       <Card></Card>
       <Card></Card>
@@ -15,18 +18,31 @@ function App(){
       <Card></Card>
       <Card></Card>
       <Card></Card>
-      <br /><hr /><hr />
+      <br />
+      <hr />
+      <hr />
       <Increment></Increment>
-      <br /><hr /><hr />
+      <br />
+      <hr />
+      <hr />
       <Form></Form>
-      <br /><hr /><hr />
+      <br />
+      <hr />
+      <hr />
       <ColorPicker></ColorPicker>
-      <br /><hr /><hr />
+      <br />
+      <hr />
+      <hr />
       <Toggle></Toggle>
-      <br /><hr /><hr />
-      
+      <br />
+      <hr />
+      <hr />
+      <Test></Test>
+      <br />
+      <hr />
+      <hr />
     </>
   );
 }
 
-export default App
+export default App;
