@@ -17,7 +17,7 @@ export default function Api() {
 
   return (
     <>
-      <h1>Fetching data from an API (useEffect)</h1>
+      <h1>Fetching data from an API (useEffect & useState)</h1>
       <button onClick={fetchFact}>Fetch Data</button>
       <p>{catFact}</p>
     </>
