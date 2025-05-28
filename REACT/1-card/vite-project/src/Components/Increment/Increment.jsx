@@ -1,4 +1,3 @@
-import "./Increment.css";
 import React, { useState } from "react";
 function Increment() {
   const [count, setCount] = useState(0);

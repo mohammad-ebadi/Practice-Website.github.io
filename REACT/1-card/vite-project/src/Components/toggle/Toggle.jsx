@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Toggle.css";
 export default function Toggle() {
   const [show, setShow] = useState(true);
 
