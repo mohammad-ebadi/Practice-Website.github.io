@@ -1,5 +1,4 @@
 import { useState } from "react";
-import picture from "./p-1.jpg"
 import "./Toggle.css"
 export default function Toggle(){
     const [show , setShow] = useState(true);
@@ -12,7 +11,7 @@ export default function Toggle(){
         <div className="container">
             <h1>Hide / Show  with useState</h1>
             <button onClick={toggle}>Hide / Show</button>
-            {show && <img src={picture} alt="picture" className="toggle" />}
+            {show && <img src="https://picsum.photos/200" alt="picture" className="toggle" />}
         </div>
     );
 }
