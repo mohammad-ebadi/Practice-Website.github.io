@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import style from "./Home.module.css";
 
 export default function Home() {
+  // local data base
   let articles = [
     {
       id: 1,
@@ -22,7 +23,6 @@ export default function Home() {
       title: "React Test 3",
       readingTime: 15,
     },
-    
   ];
   return (
     <div className={style.homeWrapper}>
@@ -30,12 +30,9 @@ export default function Home() {
       <div className="container">
         <h1>Blogs</h1>
         <div className={style.articles}>
-          {
-            articles.map((article) => (
+          {articles.map((article) => (
             <Article article={article} key={article.id}></Article>
-            ))
-          }
-          
+          ))}
         </div>
       </div>
     </div>
