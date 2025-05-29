@@ -1,0 +1,25 @@
+{
+    "articles":{
+        "status":true,
+        "data":[
+            {
+                "id":1,
+                "imageUrl":"",
+                "title":"React Test 1",
+                "readingTime":5
+            },
+            {
+                "id":2,
+                "imageUrl":"",
+                "title":"React Test 2",
+                "readingTime":10
+            },
+            {
+                "id":3,
+                "imageUrl":"",
+                "title":"React Test 3",
+                "readingTime":15
+            }
+        ]
+    }
+}

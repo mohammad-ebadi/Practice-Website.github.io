@@ -1,7 +1,9 @@
-export default function App(){
-  return(
-    <>
-      <h1>Hello world</h1>
-    </>
+import Home from "./pages/home/Home";
+
+export default function App() {
+  return (
+    <div>
+      <Home></Home>
+    </div>
   );
 }

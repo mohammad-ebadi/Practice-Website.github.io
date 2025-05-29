@@ -1,4 +1,18 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.container {
+  padding: 0px 160px;
 }

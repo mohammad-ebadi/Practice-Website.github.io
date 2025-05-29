@@ -1,0 +1,19 @@
+.header{
+    box-shadow: 0px 3px 5px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header ul{
+    display: flex;
+    padding: 160px;
+}
+.header h3{
+    padding: 160px;
+    font-size: 30px;
+}
+.header ul li {
+    margin-left: 60px;
+    cursor: pointer;
+}
