@@ -1,29 +1,22 @@
+import { Link } from "react-router-dom";
 import Article from "../../components/article/Article";
+import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import style from "./Home.module.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
-  // local data base
-  let articles = [
-    {
-      id: 1,
-      imageUrl: "",
-      title: "React Test 1",
-      readingTime: 5,
-    },
-    {
-      id: 2,
-      imageUrl: "",
-      title: "React Test 2",
-      readingTime: 10,
-    },
-    {
-      id: 3,
-      imageUrl: "",
-      title: "React Test 3",
-      readingTime: 15,
-    },
-  ];
+  const [articles , setArticles] = useState([]);
+  
+  useEffect(() => {
+    axios.get("http://localhost:8000/articles").then(result =>{
+      setArticles(result.data)
+    })
+    .catch((error) =>{
+      console.log(error)
+    })
+  }, []);
   return (
     <div className={style.homeWrapper}>
       <Navbar></Navbar>
@@ -31,10 +24,13 @@ export default function Home() {
         <h1>Blogs</h1>
         <div className={style.articles}>
           {articles.map((article) => (
-            <Article article={article} key={article.id}></Article>
+            <Link to={`/article/${article.id}`}>
+              <Article article={article} key={article.id}></Article>
+            </Link>
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

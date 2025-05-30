@@ -1,6 +1,7 @@
 .header{
     box-shadow: 0px 3px 5px;
     height: 60px;
+    background-color: rgb(170, 170, 170);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,8 +11,8 @@
     padding: 160px;
 }
 .header h3{
-    padding: 160px;
     font-size: 30px;
+    margin-left: 160px;
 }
 .header ul li {
     margin-left: 60px;

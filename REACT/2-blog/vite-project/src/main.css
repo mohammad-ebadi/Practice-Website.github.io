@@ -8,10 +8,13 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+a {
   margin: 0px;
   padding: 0px;
   list-style: none;
+  text-decoration: none;
+  color: black;
 }
 .container {
   padding: 0px 160px;

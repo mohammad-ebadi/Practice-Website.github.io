@@ -1,25 +1,41 @@
 {
-    "articles":{
-        "status":true,
-        "data":[
-            {
-                "id":1,
-                "imageUrl":"",
-                "title":"React Test 1",
-                "readingTime":5
-            },
-            {
-                "id":2,
-                "imageUrl":"",
-                "title":"React Test 2",
-                "readingTime":10
-            },
-            {
-                "id":3,
-                "imageUrl":"",
-                "title":"React Test 3",
-                "readingTime":15
-            }
-        ]
-    }
-}
+  "articles":[
+      {
+        "id": 1,
+        "imageUrl": "",
+        "title": "React Test 1",
+        "readingTime": 5,
+        "date": "2025/2/12",
+        "author": "Mohammad Ebadi",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aliquam id earum voluptatibus quas voluptate impedit autem. Consequatur nobis nemo nulla saepe enim eos dignissimos explicabo maxime quo repellendus voluptate, consequuntur, commodi corrupti, incidunt fugiat veritatis pariatur illum nam id cupiditate reiciendis minus? Ea eos consequuntur non impedit minus eum doloribus eligendi officia sapiente, quibusdam ipsum modi eaque, vero quo accusamus libero omnis expedita molestias quasi consequatur, natus nisi. Ad quo minus nemo explicabo pariatur accusamus eos, at ratione aut officia porro accusantium voluptate quibusdam aliquam soluta dolorum. Natus expedita odio maxime itaque dolorem eos incidunt vitae deserunt repudiandae voluptate."
+      },
+      {
+        "id": 2,
+        "imageUrl": "",
+        "title": "React Test 2",
+        "readingTime": 10,
+        "date": "2025/6/12",
+        "author": "Mohammad Ebadi",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aliquam id earum voluptatibus quas voluptate impedit autem. Consequatur nobis nemo nulla saepe enim eos dignissimos explicabo maxime quo repellendus voluptate, consequuntur, commodi corrupti, incidunt fugiat veritatis pariatur illum nam id cupiditate reiciendis minus? Ea eos consequuntur non impedit minus eum doloribus eligendi officia sapiente, quibusdam ipsum modi eaque, vero quo accusamus libero omnis expedita molestias quasi consequatur, natus nisi. Ad quo minus nemo explicabo pariatur accusamus eos, at ratione aut officia porro accusantium voluptate quibusdam aliquam soluta dolorum. Natus expedita odio maxime itaque dolorem eos incidunt vitae deserunt repudiandae voluptate."
+      },
+      {
+        "id": 3,
+        "imageUrl": "",
+        "title": "React Test 3",
+        "readingTime": 15,
+        "date": "2025/2/5",
+        "author": "Mohammad Ebadi",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aliquam id earum voluptatibus quas voluptate impedit autem. Consequatur nobis nemo nulla saepe enim eos dignissimos explicabo maxime quo repellendus voluptate, consequuntur, commodi corrupti, incidunt fugiat veritatis pariatur illum nam id cupiditate reiciendis minus? Ea eos consequuntur non impedit minus eum doloribus eligendi officia sapiente, quibusdam ipsum modi eaque, vero quo accusamus libero omnis expedita molestias quasi consequatur, natus nisi. Ad quo minus nemo explicabo pariatur accusamus eos, at ratione aut officia porro accusantium voluptate quibusdam aliquam soluta dolorum. Natus expedita odio maxime itaque dolorem eos incidunt vitae deserunt repudiandae voluptate."
+      },
+      {
+        "id": 4,
+        "imageUrl": "",
+        "title": "React Test 4",
+        "readingTime": 20,
+        "date": "2025/5/8",
+        "author": "Mohammad Ebadi",
+        "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, aliquam id earum voluptatibus quas voluptate impedit autem. Consequatur nobis nemo nulla saepe enim eos dignissimos explicabo maxime quo repellendus voluptate, consequuntur, commodi corrupti, incidunt fugiat veritatis pariatur illum nam id cupiditate reiciendis minus? Ea eos consequuntur non impedit minus eum doloribus eligendi officia sapiente, quibusdam ipsum modi eaque, vero quo accusamus libero omnis expedita molestias quasi consequatur, natus nisi. Ad quo minus nemo explicabo pariatur accusamus eos, at ratione aut officia porro accusantium voluptate quibusdam aliquam soluta dolorum. Natus expedita odio maxime itaque dolorem eos incidunt vitae deserunt repudiandae voluptate."
+      }
+    ]
+  }
+

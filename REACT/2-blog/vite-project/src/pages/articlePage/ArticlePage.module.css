@@ -1,0 +1,18 @@
+.articlePage {
+  text-align: center;
+}
+.articlePage img {
+  width: 500px;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+.articlePage h1 {
+  padding: 20px;
+}
+.articleInfo span {
+  padding: 15px;
+  font-size: 15px;
+}
+.articlePage p {
+  margin: 0px 50px 10px 50px;
+}
