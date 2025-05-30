@@ -12,7 +12,7 @@ export default function Navbar() {
           <Link to="/">Blogs list</Link>
         </li>
         <li>
-          <Link to="">New Blog</Link>
+          <Link to="/create-article">New Blog</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
