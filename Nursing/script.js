@@ -1,55 +1,143 @@
-// Form submission handling
-document.getElementById('booking-form').addEventListener('submit', function(e) {
+// DOM Elements
+const loginBtn = document.querySelector('.login-btn');
+const registerBtn = document.querySelector('.register-btn');
+const loginModal = document.getElementById('loginModal');
+const registerModal = document.getElementById('registerModal');
+const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+const forgotPasswordLink = document.getElementById('forgot-password-link');
+const closeButtons = document.querySelectorAll('.close');
+const switchFormLinks = document.querySelectorAll('.switch-form');
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+// Form Elements
+const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
+const forgotPasswordForm = document.getElementById('forgot-password-form');
+
+// Show modal function
+function showModal(modal) {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+// Hide modal function
+function hideModal(modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Restore background scrolling
+}
+
+// Event Listeners for Authentication
+loginBtn.addEventListener('click', () => showModal(loginModal));
+registerBtn.addEventListener('click', () => showModal(registerModal));
+forgotPasswordLink.addEventListener('click', () => {
+    hideModal(loginModal);
+    showModal(forgotPasswordModal);
+});
+
+// Close modal when clicking the close button
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        hideModal(modal);
+    });
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+        hideModal(e.target);
+    }
+});
+
+// Switch between login and register forms
+switchFormLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.getAttribute('data-target');
+        
+        // Hide all modals
+        [loginModal, registerModal, forgotPasswordModal].forEach(modal => {
+            hideModal(modal);
+        });
+        
+        // Show target modal
+        if (target === 'login') {
+            showModal(loginModal);
+        } else if (target === 'register') {
+            showModal(registerModal);
+        }
+    });
+});
+
+// Form submission handlers
+loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
     
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const date = document.getElementById('date').value;
-    const service = document.getElementById('service').value;
-    const message = document.getElementById('message').value;
+    // TODO: Implement login logic
+    console.log('Login attempt:', { email, password });
+    hideModal(loginModal);
+});
 
-    // Basic form validation
-    if (!name || !email || !phone || !date || !service) {
-        alert('Please fill in all required fields');
-        return;
+registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('register-name').value;
+    const email = document.getElementById('register-email').value;
+    const phone = document.getElementById('register-phone').value;
+    const password = document.getElementById('register-password').value;
+    const confirmPassword = document.getElementById('register-confirm-password').value;
+    
+    // TODO: Implement registration logic
+    console.log('Registration attempt:', { name, email, phone, password, confirmPassword });
+    hideModal(registerModal);
+});
+
+forgotPasswordForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('reset-email').value;
+    
+    // TODO: Implement password reset logic
+    console.log('Password reset attempt:', { email });
+    hideModal(forgotPasswordModal);
+});
+
+// Mobile menu functionality
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-links') && !e.target.closest('.mobile-menu-btn')) {
+        navLinks.classList.remove('active');
     }
+});
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
+// Close mobile menu when clicking a link
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
 
-    // Phone validation
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
-        alert('Please enter a valid 10-digit phone number');
-        return;
-    }
-
-    // Create booking confirmation message
-    const confirmationMessage = `
-        Thank you for your booking request!
-        
-        Booking Details:
-        Name: ${name}
-        Email: ${email}
-        Phone: ${phone}
-        Date: ${date}
-        Service: ${service}
-        ${message ? `Additional Information: ${message}` : ''}
-        
-        We will contact you shortly to confirm your appointment.
-    `;
-
-    // Show confirmation
-    alert(confirmationMessage);
-
-    // Reset form
-    this.reset();
+// Booking form submission
+const bookingForm = document.getElementById('booking-form');
+bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        date: document.getElementById('date').value,
+        service: document.getElementById('service').value,
+        message: document.getElementById('message').value
+    };
+    
+    // TODO: Implement booking logic
+    console.log('Booking attempt:', formData);
+    bookingForm.reset();
 });
 
 // Smooth scrolling for navigation links
@@ -96,191 +184,4 @@ submitButton.addEventListener('click', function() {
     setTimeout(() => {
         this.innerHTML = 'Book Now';
     }, 2000);
-});
-
-// Modal handling
-const loginModal = document.getElementById('loginModal');
-const registerModal = document.getElementById('registerModal');
-const forgotPasswordModal = document.getElementById('forgotPasswordModal');
-const loginBtn = document.querySelector('.login-btn');
-const registerBtn = document.querySelector('.register-btn');
-const forgotPasswordLink = document.getElementById('forgot-password-link');
-const closeBtns = document.querySelectorAll('.close');
-const switchFormLinks = document.querySelectorAll('.switch-form');
-
-// Show modal functions
-function showModal(modal) {
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function hideModal(modal) {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
-// Event listeners for buttons
-loginBtn.addEventListener('click', () => showModal(loginModal));
-registerBtn.addEventListener('click', () => showModal(registerModal));
-forgotPasswordLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    hideModal(loginModal);
-    showModal(forgotPasswordModal);
-});
-
-// Close modals when clicking the close button or outside the modal
-closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        hideModal(loginModal);
-        hideModal(registerModal);
-        hideModal(forgotPasswordModal);
-    });
-});
-
-window.addEventListener('click', (e) => {
-    if (e.target === loginModal) hideModal(loginModal);
-    if (e.target === registerModal) hideModal(registerModal);
-    if (e.target === forgotPasswordModal) hideModal(forgotPasswordModal);
-});
-
-// Switch between forms
-switchFormLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = link.getAttribute('data-target');
-        if (target === 'login') {
-            hideModal(registerModal);
-            hideModal(forgotPasswordModal);
-            showModal(loginModal);
-        } else if (target === 'register') {
-            hideModal(loginModal);
-            hideModal(forgotPasswordModal);
-            showModal(registerModal);
-        }
-    });
-});
-
-// Login form handling
-document.getElementById('login-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const email = document.getElementById('login-email').value;
-    const password = document.getElementById('login-password').value;
-
-    // Basic validation
-    if (!email || !password) {
-        alert('Please fill in all fields');
-        return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-
-    // Here you would typically make an API call to your backend
-    // For now, we'll just show a success message
-    alert('Login successful!');
-    hideModal(loginModal);
-    this.reset();
-});
-
-// Register form handling
-document.getElementById('register-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('register-name').value;
-    const email = document.getElementById('register-email').value;
-    const phone = document.getElementById('register-phone').value;
-    const password = document.getElementById('register-password').value;
-    const confirmPassword = document.getElementById('register-confirm-password').value;
-
-    // Basic validation
-    if (!name || !email || !phone || !password || !confirmPassword) {
-        alert('Please fill in all fields');
-        return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-
-    // Phone validation
-    const phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
-        alert('Please enter a valid 10-digit phone number');
-        return;
-    }
-
-    // Password validation
-    if (password.length < 6) {
-        alert('Password must be at least 6 characters long');
-        return;
-    }
-
-    if (password !== confirmPassword) {
-        alert('Passwords do not match');
-        return;
-    }
-
-    // Here you would typically make an API call to your backend
-    // For now, we'll just show a success message
-    alert('Registration successful! Please login.');
-    hideModal(registerModal);
-    showModal(loginModal);
-    this.reset();
-});
-
-// Forgot Password form handling
-document.getElementById('forgot-password-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const email = document.getElementById('reset-email').value;
-
-    // Basic validation
-    if (!email) {
-        alert('Please enter your email address');
-        return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-
-    // Here you would typically make an API call to your backend
-    // For now, we'll just show a success message
-    alert('Password reset link has been sent to your email address.');
-    hideModal(forgotPasswordModal);
-    showModal(loginModal);
-    this.reset();
-});
-
-// Mobile menu handling
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-links') && !e.target.closest('.mobile-menu-btn')) {
-        navLinks.classList.remove('active');
-    }
-});
-
-// Close mobile menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
 }); 

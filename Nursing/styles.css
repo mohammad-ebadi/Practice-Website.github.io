@@ -1,27 +1,31 @@
-/* Reset and base styles */
+/* ===== RESET AND BASE STYLES ===== */
+/* Reset default browser styles and set box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base body styles with RTL support */
 body {
-    font-family: 'Vazirmatn', sans-serif;
+    font-family: 'Vazirmatn', sans-serif; /* Persian font for better Farsi text rendering */
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Header and Navigation */
+/* ===== HEADER AND NAVIGATION ===== */
+/* Fixed header with shadow for better visibility */
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensure header stays above other content */
 }
 
+/* Navigation container with flexbox layout */
 nav {
     display: flex;
     justify-content: space-between;
@@ -31,22 +35,26 @@ nav {
     margin: 0 auto;
 }
 
+/* Logo styling */
 .logo h1 {
     color: #2c3e50;
     font-size: 1.8rem;
 }
 
+/* Navigation links container */
 .nav-links {
     display: flex;
     list-style: none;
     align-items: center;
 }
 
+/* Individual navigation items with RTL spacing */
 .nav-links li {
-    margin-right: 2rem;
+    margin-right: 2rem; /* RTL: right margin instead of left */
     margin-left: 0;
 }
 
+/* Navigation link styling with hover effect */
 .nav-links a {
     text-decoration: none;
     color: #2c3e50;
@@ -58,9 +66,10 @@ nav {
     color: #3498db;
 }
 
-/* Mobile Menu Button */
+/* ===== MOBILE MENU BUTTON ===== */
+/* Hamburger menu button for mobile devices */
 .mobile-menu-btn {
-    display: none;
+    display: none; /* Hidden by default, shown on mobile */
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -68,7 +77,8 @@ nav {
     cursor: pointer;
 }
 
-/* Hero Section */
+/* ===== HERO SECTION ===== */
+/* Full-screen hero section with background image */
 .hero {
     background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
                 url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
@@ -79,25 +89,29 @@ nav {
     align-items: center;
     text-align: center;
     color: white;
-    padding: 6rem 1rem 2rem;
+    padding: 6rem 1rem 2rem; /* Extra top padding for fixed header */
 }
 
+/* Hero content container */
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
+/* Responsive hero heading */
 .hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem); /* Fluid typography */
     margin-bottom: 1rem;
 }
 
+/* Responsive hero paragraph */
 .hero p {
     font-size: clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 2rem;
 }
 
+/* Call-to-action button styling */
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
@@ -112,18 +126,21 @@ nav {
     background-color: #2980b9;
 }
 
-/* Services Section */
+/* ===== SERVICES SECTION ===== */
+/* Services section with light background */
 .services {
     padding: 5rem 1rem;
     background-color: #f9f9f9;
 }
 
+/* Section heading */
 .services h2 {
     text-align: center;
     margin-bottom: 3rem;
     color: #2c3e50;
 }
 
+/* Grid layout for service cards */
 .service-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -133,6 +150,7 @@ nav {
     padding: 0 1rem;
 }
 
+/* Individual service card styling */
 .card {
     background: white;
     padding: 2rem;
@@ -142,38 +160,45 @@ nav {
     transition: transform 0.3s ease;
 }
 
+/* Card hover effect */
 .card:hover {
     transform: translateY(-5px);
 }
 
+/* Service icon styling */
 .card i {
     font-size: 2.5rem;
     color: #3498db;
     margin-bottom: 1rem;
 }
 
-/* Booking Section */
+/* ===== BOOKING SECTION ===== */
+/* Booking section with form */
 .booking {
     padding: 5rem 1rem;
     background-color: white;
 }
 
+/* Section heading */
 .booking h2 {
     text-align: center;
     margin-bottom: 3rem;
     color: #2c3e50;
 }
 
+/* Booking form container */
 #booking-form {
     max-width: 600px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
+/* Form group spacing */
 .form-group {
     margin-bottom: 1.5rem;
 }
 
+/* Form input styling with RTL support */
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -182,16 +207,18 @@ nav {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-    text-align: right;
-    direction: rtl;
+    text-align: right; /* RTL text alignment */
+    direction: rtl; /* RTL text direction */
 }
 
+/* Placeholder text alignment for RTL */
 .form-group input::placeholder,
 .form-group select::placeholder,
 .form-group textarea::placeholder {
     text-align: right;
 }
 
+/* Submit button styling */
 .submit-button {
     width: 100%;
     padding: 1rem;
@@ -208,36 +235,42 @@ nav {
     background-color: #2980b9;
 }
 
-/* About Section */
+/* ===== ABOUT SECTION ===== */
+/* About section with light background */
 .about {
     padding: 5rem 1rem;
     background-color: #f9f9f9;
 }
 
+/* Section heading */
 .about h2 {
     text-align: center;
     margin-bottom: 3rem;
     color: #2c3e50;
 }
 
+/* About content container */
 .about-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-/* Contact Section */
+/* ===== CONTACT SECTION ===== */
+/* Contact section styling */
 .contact {
     padding: 5rem 1rem;
     background-color: white;
 }
 
+/* Section heading */
 .contact h2 {
     text-align: center;
     margin-bottom: 3rem;
     color: #2c3e50;
 }
 
+/* Contact info grid layout */
 .contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -246,6 +279,7 @@ nav {
     margin: 0 auto;
 }
 
+/* Individual contact item styling */
 .contact-item {
     text-align: center;
     padding: 2rem;
@@ -253,13 +287,15 @@ nav {
     border-radius: 10px;
 }
 
+/* Contact icon styling */
 .contact-item i {
     font-size: 2rem;
     color: #3498db;
     margin-bottom: 1rem;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
+/* Footer styling */
 footer {
     background-color: #2c3e50;
     color: white;
@@ -267,7 +303,8 @@ footer {
     padding: 2rem;
 }
 
-/* Auth Buttons */
+/* ===== AUTHENTICATION BUTTONS ===== */
+/* Base auth button styling */
 .auth-btn {
     padding: 0.5rem 1rem;
     border: none;
@@ -277,6 +314,7 @@ footer {
     transition: all 0.3s ease;
 }
 
+/* Login button specific styling */
 .login-btn {
     background-color: transparent;
     color: #3498db;
@@ -288,6 +326,7 @@ footer {
     color: white;
 }
 
+/* Register button specific styling */
 .register-btn {
     background-color: #3498db;
     color: white;
@@ -297,7 +336,8 @@ footer {
     background-color: #2980b9;
 }
 
-/* Modal Styles */
+/* ===== MODAL STYLES ===== */
+/* Modal overlay */
 .modal {
     display: none;
     position: fixed;
@@ -311,6 +351,7 @@ footer {
     justify-content: center;
 }
 
+/* Modal content container */
 .modal-content {
     background-color: white;
     padding: 2rem;
@@ -320,9 +361,10 @@ footer {
     position: relative;
     animation: modalSlideIn 0.3s ease;
     margin: 1rem;
-    text-align: right;
+    text-align: right; /* RTL text alignment */
 }
 
+/* Modal slide-in animation */
 @keyframes modalSlideIn {
     from {
         transform: translateY(-100px);
@@ -334,34 +376,37 @@ footer {
     }
 }
 
+/* Close button styling */
 .close {
     position: absolute;
-    right: 1rem;
+    right: 1rem; /* RTL positioning */
     top: 1rem;
     font-size: 1.5rem;
     cursor: pointer;
     color: #666;
     transition: color 0.3s ease;
     left: auto;
-    right: 1rem;
 }
 
 .close:hover {
     color: #333;
 }
 
+/* Modal heading */
 .modal h2 {
     text-align: center;
     color: #2c3e50;
     margin-bottom: 2rem;
 }
 
+/* Form footer text */
 .form-footer {
     text-align: center;
     margin-top: 1rem;
     color: #666;
 }
 
+/* Form footer links */
 .form-footer a {
     color: #3498db;
     text-decoration: none;
@@ -372,8 +417,9 @@ footer {
     text-decoration: underline;
 }
 
+/* Forgot password link styling */
 .forgot-password {
-    text-align: right;
+    text-align: right; /* RTL alignment */
     margin-top: -0.5rem;
     margin-bottom: 1rem;
 }
@@ -390,7 +436,8 @@ footer {
     text-decoration: underline;
 }
 
-/* Add animation for password reset success message */
+/* ===== ANIMATIONS ===== */
+/* Fade-in animation for success messages */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -402,6 +449,7 @@ footer {
     }
 }
 
+/* Success message styling */
 .reset-success {
     background-color: #d4edda;
     color: #155724;
@@ -412,7 +460,8 @@ footer {
     display: none;
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
+/* Large screens (up to 1024px) */
 @media (max-width: 1024px) {
     .nav-links {
         margin-left: 1rem;
@@ -423,11 +472,14 @@ footer {
     }
 }
 
+/* Tablets and smaller devices (up to 768px) */
 @media (max-width: 768px) {
+    /* Show mobile menu button */
     .mobile-menu-btn {
         display: block;
     }
 
+    /* Mobile navigation menu */
     .nav-links {
         display: none;
         position: absolute;
@@ -441,6 +493,7 @@ footer {
         margin-right: 0;
     }
 
+    /* Active mobile menu */
     .nav-links.active {
         display: flex;
     }
@@ -454,19 +507,23 @@ footer {
         padding: 0.5rem;
     }
 
+    /* Full-width auth buttons on mobile */
     .auth-btn {
         width: 100%;
         margin: 0.5rem 0;
     }
 
+    /* Adjust hero padding for mobile */
     .hero {
         padding-top: 5rem;
     }
 
+    /* Single column service cards on mobile */
     .service-cards {
         grid-template-columns: 1fr;
     }
 
+    /* Adjust modal size for mobile */
     .modal-content {
         width: 95%;
         margin: 0.5rem;
@@ -474,11 +531,14 @@ footer {
     }
 }
 
+/* Small mobile devices (up to 480px) */
 @media (max-width: 480px) {
+    /* Smaller logo on mobile */
     .logo h1 {
         font-size: 1.5rem;
     }
 
+    /* Adjust hero text size */
     .hero h1 {
         font-size: 1.8rem;
     }
@@ -487,22 +547,26 @@ footer {
         font-size: 1rem;
     }
 
+    /* Smaller CTA button */
     .cta-button {
         padding: 0.8rem 1.5rem;
     }
 
+    /* Adjust form input sizes */
     .form-group input,
     .form-group select,
     .form-group textarea {
         padding: 0.6rem;
     }
 
+    /* Smaller submit button */
     .submit-button {
         padding: 0.8rem;
     }
 }
 
-/* Touch Device Optimizations */
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+/* Disable hover effects on touch devices */
 @media (hover: none) {
     .nav-links a:hover {
         color: #2c3e50;
